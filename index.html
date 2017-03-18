@@ -36,7 +36,8 @@ body { background: #fff; }
 header, footer, .container { max-width: 45em; margin: 0 auto; }
 
 header { padding: 0 0.5em; color: #C90B0B; }
-header img { border-radius: 40px; float: left; }
+/* removed border radius and altered max height, width and padding to make more apealing - ref issues 22 in Github*/
+header img {float: left; padding-right: 10px; max-height: 200px; max-width: 200px;}
 header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
 header p span { font-size: 0.8em; font-weight: normal;}
 
@@ -47,8 +48,10 @@ header p span { font-size: 0.8em; font-weight: normal;}
 
 .content { padding: 1em 1em; }
 .content li { list-style-type: none; font-size: 1.1em;}
-li img { float:left; padding-right: 1em; }
-li p { font-size: 0.9em; font-style: italic; }
+/* added some adjustments to the image display , removed float-left, added width 100px to ref issue 22 in Github*/
+li img { padding-right: 1em; padding-bottom: 1em; width: 100px; }
+/* added float-right to text ref issue 22 in GitHub */
+li p { font-size: 0.9em; font-style: italic; float: right; }
 
 footer {
   padding: 0 0.5em;
@@ -109,7 +112,7 @@ window.addEventListener("load", function(event) {
 
   <body>
     <header>
-      <a href="/"><img src="img/profilepic.jpg"></a>
+      <a<img src="img/profilepic.jpg"></a>
       <p>Jon Collins<br><span>Web Building Project Manager</span></p>
     </header>
 <!-- in the section below I replaced Camarans info and links with my own, to convert this to a truly personalised experience -->
