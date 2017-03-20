@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- updated the information with Personalised information and updated the meta tags -->
+    <meta name="description" content=" WebSpeed Optimisation Project ">
+    <meta name="author" content=" Jon Collins ">
+    <title>Jon Collins: Portfolio</title>
+
+    <!-- call to fonts.googleapis.com created latency but served no visible purpose in the site. So removed it - Result was a jump from 27/100 to 28/100 -->
+
+    <!-- The call to the styles.css stylesheet was renderblocking so I elimanted the call and inlined the css here below - Result was a jump from 28/100 to 29/100 -->
+    <style type="text/css">
+      html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+}
+body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
+body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
+
+a { color: #12C; }
+a:visited { color: #61C; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { color: #c00; outline: 0; }
+
+b, strong { font-weight: bold; }
+pre, code { font-family: monospace, monospace; font-size: 1em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
+img { border: 0; max-width: 100%; }
+
+body { background: #fff; }
+header, footer, .container { max-width: 45em; margin: 0 auto; }
+
+header { padding: 0 0.5em; color: #C90B0B; }
+/* removed border radius and altered max height, width and padding to make more apealing - ref issues 22 in Github*/
+header img {float: left; padding-right: 10px; max-height: 200px; max-width: 200px;}
+header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
+header p span { font-size: 0.8em; font-weight: normal;}
+
+.hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+.content { padding: 1em 1em; }
+.content li { list-style-type: none; font-size: 1.1em;}
+/* added some adjustments to the image display , removed float-left, added width 100px to ref issue 22 in Github*/
+li img { padding-right: 1em; padding-bottom: 1em; width: 100px; }
+/* added float-right to text ref issue 22 in GitHub */
+li p { font-size: 0.9em; font-style: italic; float: right; }
+
+footer {
+  padding: 0 0.5em;
+  border-top: 1px solid #ccc;
+}
+footer span { float: right; font-style: italic; }
+
+/* Smartphones (portrait) */
+@media only screen and (max-width: 480px) {
+  body { font-size: 12px;}
+  header p { padding-left: 4.5em;}
+}
+    </style>
+
+<!-- The call to the print.css stylesheet was renderblocking so I elimanted the call and inlined the css here below - Result was no change in pagespeed, staying at 29/100 but I no longer had Render blocking CSS -->
+
+    <style type="text/css">
+    @media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+    </style>
+    <!--<link href="css/print.css" rel="stylesheet">-->
+
+    <script>
+      (function(w,g){w['GoogleAnalyticsObject']=g;
+      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
+
+      // Optional TODO: replace with your Google Analytics profile ID.
+      ga('create', 'UA-XXXX-Y');
+      ga('send', 'pageview');
+    </script>
+    <!-- in th below call to google-analytics, I asynched the script to remove it from the list of blocking JS, this was successfull but did not have a big impact on the pagespeed-->
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
+    <script>
+        // Measuring the Critical Rendering Path with Navigation Timing
+// https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp
+
+function logCRP() {
+  var t = window.performance.timing,
+    dcl = t.domContentLoadedEventStart - t.domLoading,
+    complete = t.domComplete - t.domLoading;
+  var stats = document.getElementById("crp-stats");
+  stats.textContent = 'DCL: ' + dcl + 'ms, onload: ' + complete + 'ms';
+}
+
+window.addEventListener("load", function(event) {
+  logCRP();
+});
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a><img src="img/profilepic.jpg"></a>
+      <p>Jon Collins<br><span>Web Building Project Manager</span></p>
+    </header>
+<!-- in the section below I replaced Camarans info and links with my own, to convert this to a truly personalised experience -->
+    <div class="container">
+      <div class="hero">
+        <strong>I love building the Web!</strong> In my work as a project Manager at Emakina Web Building team I get to deliver great websites for big clients. But I dont get to do the work myself. so here at Udacity I am honing my skills to see if I can do what I love so much. Build the Web <br> Contact me: jon.collins71@gmail.com
+      </div>
+
+      <div class="content">
+        <ul>
+          <li>
+          <a href="http://jcwd.github.io/build_portfolio_site/"><img src="img/PortfolioPic.jpg"></a>
+            <p>This was my first ever portfolio site</p>
+          </li>
+
+          <li>
+            <a href="http://jcwd.github.io/The_hometown_app/"><img src="img/HomeTownPic.jpg"></a>
+            <p>Creating and Article from a Mockup</p>
+          </li>
+          <li>
+            <a href="https://jcwd.github.io/online-resume/"><img src="img/ResumePic.jpg"></a>
+            <p>Make that resume POP !</p>
+          </li>
+          <li>
+            <a href="views/pizza.html"><img src="views/images/pizzeria.jpg"></a>
+            <p>Who wants a performant pizza?</p>
+          </li>
+        </ul>
+      </div>
+
+      <footer>
+        <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
+      </footer>
+    </div>
+  </body>
+</html>
